@@ -1,65 +1,101 @@
+import styles from "./page.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className={styles.main}>
+      <div className={styles.background}>
+        <div className={styles.profile}>
+          <Image
+            src="/me.jpg"
+            alt="A Portrait of myself"
+            width={150}
+            height={150}
+            className={styles.avatar}
+          />
+          <h1>Julian Schumacher</h1>
+          <h2>Cyber Security Student</h2>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className={styles.links}>
+          <div className={styles.outerLinkDiv}>
+            <h3>Socials</h3>
+            <p>Let&rsquo;s connect</p>
+            <div className={styles.innerLinkDiv}>
+              <ul>
+                <li>
+                  <Link href="https://github.com/juliandevelops" target="_blank">
+                    Github
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://www.linkedin.com/in/julian-schumacher-b6005021a/"
+                    target="_blank"
+                  >
+                    LinkedIn
+                  </Link>
+                </li>
+                <li>
+                  < Link href="https://x.com/julian_develops" target="_blank">
+                    X
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://instagram.com/juliandevelops" target="_blank">
+                    Instagram
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://www.patreon.com/juliandevelops"
+                    target="_blank"
+                  >
+                    Patreon
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className={styles.outerLinkDiv}>
+            <h3>Other Links</h3>
+            <p>Projects and Connections</p>
+            <div className={styles.innerLinkDiv}>
+              <ul>
+                <li>
+                  <Link href="https://v3s.tech" target="_blank">
+                    Virtual Safety & Security Systems
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://juliandevelops.com"
+                    target="_blank"
+                  >
+                    Julian Develops
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://apps.apple.com/de/developer/julian-schumacher/id1681063160"
+                    target="_blank"
+                  >
+                    App Store
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://play.google.com/store/apps/developer?id=Julian+Schumacher"
+                    target="_blank"
+                  >
+                    Play Store
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </div >
+    </main >
   );
 }

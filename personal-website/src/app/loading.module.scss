@@ -1,0 +1,28 @@
+.loadingCircle {
+  position: absolute;
+  top: 40vh;
+  left: calc(50vw - 10vh);
+  border: 8px dotted #ccffff;
+  border-top: 8px dotted #0000cc;
+  border-radius: 50%;
+  width: 20vh;
+  height: 20vh;
+  animation: spin 2.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingText {
+  top: 75vh;
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  font-size: 2em;
+}

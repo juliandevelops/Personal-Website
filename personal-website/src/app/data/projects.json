@@ -1,0 +1,408 @@
+{
+  "projects": {
+    "types": {
+      "apps": {
+        "name": "Apps",
+        "content": {
+          "2Do": {
+            "type-implemented": [
+              "Mobile"
+            ],
+            "type-goal": [
+              "Mobile"
+            ],
+            "platforms-ready": [
+              "Android",
+              "iOS"
+            ],
+            "platforms-goal": [
+              "Android",
+              "iOS"
+            ],
+            "languages": [
+              "Dart"
+            ],
+            "frameworks": [
+              "Flutter"
+            ],
+            "name": "2Do",
+            "description": "This App helps you organize your day",
+            "features": [
+              "Keep track of all your tasks",
+              "Organize your day",
+              "Add, delete, update and complete tasks",
+              "Organize your Todos with tags",
+              "Add Notes using two different input modes (notes and brainstorm)"
+            ],
+            "connection": {
+              "repo": "https://github.com/juliandevelops/2Do",
+              "playstore": "https://play.google.com/store/apps/details?id=com.jules.todo",
+              "appstore": "https://apps.apple.com/de/app/2do-organize-your-tasks/id6450028797",
+              "fdroid": null,
+              "pubdev": null,
+              "youtrack": null
+            },
+            "first-version-released": true,
+            "activeSupport": false
+          },
+          "reading_diary": {
+            "type-implemented": [
+              "Mobile"
+            ],
+            "type-goal": [
+              "Mobile",
+              "Desktop"
+            ],
+            "platforms-ready": [
+              "Android",
+              "iOS"
+            ],
+            "platforms-goal": [
+              "Android",
+              "iOS",
+              "macOS",
+              "Windows",
+              "Linux"
+            ],
+            "languages": [
+              "Dart"
+            ],
+            "frameworks": [
+              "Flutter"
+            ],
+            "name": "Reading Diary",
+            "description": "Write down your thoughts about what you read",
+            "features": [
+              "Organize and structure your thoughts",
+              "Read every day and write down your thoughts",
+              "Add, delete, update and organize your Books",
+              "Keep track of your wishes in a book-wishlist",
+              "Add entries for every day",
+              "Keep track of your reading progress",
+              "Link websites to books or entries"
+            ],
+            "connection": {
+              "repo": "https://github.com/juliandevelops/Reading-Diary",
+              "playstore": "https://play.google.com/store/apps/details?id=com.jules.reading_diary",
+              "appstore": "https://apps.apple.com/de/app/reading-diary-book-journal/id6450028928",
+              "fdroid": null,
+              "pubdev": null,
+              "youtrack": null
+            },
+            "first-version-released": true,
+            "activeSupport": false
+          },
+          "financer": {
+            "type-ready": [
+              "Mobile"
+            ],
+            "type-goal": [
+              "Mobile",
+              "Desktop"
+            ],
+            "platforms-ready": [
+              "iOS"
+            ],
+            "platforms-goal": [
+              "iOS",
+              "macOS"
+            ],
+            "languages": [
+              "Swift"
+            ],
+            "frameworks": [
+              "SwiftUI"
+            ],
+            "name": "Financer",
+            "description": "Keep track of your finances",
+            "features": [
+              "Organize your Finances",
+              "Keep track of your money",
+              "Always be up-to-date with your bank balance"
+            ],
+            "connection": {
+              "repo": "https://github.com/juliandevelops/Financer",
+              "playstore": null,
+              "appstore": "https://apps.apple.com/de/app/financer-financial-overview/id6447355054",
+              "fdroid": null,
+              "pubdev": null,
+              "youtrack": null
+            },
+            "first-version-released": true,
+            "activeSupport": false
+          },
+          "i-am-rich": {
+            "type-ready": [
+              "Mobile",
+              "Desktop"
+            ],
+            "type-goal": [
+              "Mobile",
+              "Desktop"
+            ],
+            "platforms-ready": [
+              "iOS",
+              "Android",
+              "macOS",
+              "Windows",
+              "Linux"
+            ],
+            "platforms-goal": [
+              "iOS",
+              "Android",
+              "macOS",
+              "Windows",
+              "Linux"
+            ],
+            "languages": [
+              "Dart"
+            ],
+            "frameworks": [
+              "Flutter"
+            ],
+            "name": "I am Rich",
+            "description": "Show of how rich you are",
+            "features": [
+              "Show of your money",
+              "Read about how stupid I am rich Apps really are",
+              "Support my other projects"
+            ],
+            "connection": {
+              "repo": "https://github.com/juliandevelops/I-am-rich",
+              "playstore": null,
+              "appstore": null,
+              "fdroid": null,
+              "pubdev": null,
+              "youtrack": null
+            },
+            "first-version-released": true,
+            "activeSupport": false
+          },
+          "protecto-pass": {
+            "type-ready": [],
+            "type-goal": [
+              "Mobile",
+              "Desktop"
+            ],
+            "platforms-ready": [],
+            "platforms-goal": [
+              "iOS",
+              "macOS"
+            ],
+            "languages": [
+              "Swift"
+            ],
+            "frameworks": [
+              "SwiftUI"
+            ],
+            "name": "Protecto Pass",
+            "description": "The one and only simple, secure and intuitive Password Safe to safely store your Passwords, Keys, and confidential data and documents",
+            "features": [
+              "Securely store your password",
+              "Sync between devices",
+              "Use different encryption algorithms",
+              "Store in different ways",
+              "Encrypt Pictures and Documents",
+              "Organize your database with folders",
+              "Separate different data with multiple database"
+            ],
+            "connection": {
+              "repo": "https://github.com/V3Sofficial/Protecto-Pass",
+              "playstore": null,
+              "appstore": null,
+              "fdroid": null,
+              "pubdev": null,
+              "youtrack": null
+            },
+            "first-version-released": false,
+            "activeSupport": true
+          }
+        }
+      },
+      "plugins": {
+        "name": "Plugins",
+        "content": {
+          "native_encryption": {
+            "type-ready": [],
+            "type-goal": [
+              "Desktop",
+              "Mobile",
+              "Web"
+            ],
+            "platforms-ready": [],
+            "platforms-goal": [
+              "iOS",
+              "Android",
+              "macOS",
+              "Windows",
+              "Linux"
+            ],
+            "languages": [
+              "Dart",
+              "Kotlin",
+              "Swift"
+            ],
+            "frameworks": [
+              "Flutter"
+            ],
+            "name": "Native Encryption",
+            "description": "Use native system encryption in your Flutter App",
+            "features": [],
+            "connection": {
+              "repo": "https://github.com/jules-media/native_encryption",
+              "playstore": null,
+              "appstore": null,
+              "fdroid": null,
+              "pubdev": "https://pub.dev/packages/native_encryption",
+              "youtrack": null
+            },
+            "first-version-released": true,
+            "activeSupport": false
+          }
+        }
+      },
+      "packages": {
+        "name": "Packages",
+        "content": {
+          "string_translate": {
+            "type-ready": [
+              "Desktop",
+              "Mobile",
+              "Web"
+            ],
+            "type-goal": [
+              "Desktop",
+              "Mobile",
+              "Web"
+            ],
+            "platforms-ready": [
+              "iOS",
+              "Android",
+              "macOS",
+              "Windows",
+              "Linux"
+            ],
+            "platforms-goal": [
+              "iOS",
+              "Android",
+              "macOS",
+              "Windows",
+              "Linux"
+            ],
+            "languages": [
+              "Dart"
+            ],
+            "frameworks": [],
+            "name": "String Translate",
+            "description": "Translate Strings",
+            "features": [
+              "Translate strings into different languagess",
+              "Use Standard Translations",
+              "Implement seamlessly in Flutter frameworks",
+              "Use Locale's, initial Locale and change Locale Functions"
+            ],
+            "connection": {
+              "repo": "https://github.com/jules-media/string_translate",
+              "playstore": null,
+              "appstore": null,
+              "fdroid": null,
+              "pubdev": "https://pub.dev/packages/string_translate",
+              "youtrack": null
+            },
+            "first-version-released": true,
+            "activeSupport": true
+          },
+          "modern_themes": {
+            "type-ready": [
+              "Desktop",
+              "Mobile",
+              "Web"
+            ],
+            "type-goal": [
+              "Desktop",
+              "Mobile",
+              "Web"
+            ],
+            "platforms-ready": [
+              "iOS",
+              "Android",
+              "macOS",
+              "Windows",
+              "Linux"
+            ],
+            "platforms-goal": [
+              "iOS",
+              "Android",
+              "macOS",
+              "Windows",
+              "Linux"
+            ],
+            "languages": [
+              "Dart"
+            ],
+            "frameworks": [
+              "Flutter"
+            ],
+            "name": "Modern Themes",
+            "description": "Use modern Themes and Theme Components in you Apps",
+            "features": [
+              "Use modern Themes in all your Apps",
+              "Personalize your Themes with Components",
+              "Use Functions to change and reload the Themes at runtime"
+            ],
+            "connection": {
+              "repo": "https://github.com/jules-media/modern_themes",
+              "playstore": null,
+              "appstore": null,
+              "fdroid": null,
+              "pubdev": "https://pub.dev/packages/modern_themes",
+              "youtrack": null
+            },
+            "first-version-released": true,
+            "activeSupport": true
+          }
+        }
+      },
+      "command_line_tools": {
+        "name": "Command Line Tools",
+        "content": {
+          "craid": {
+            "type-ready": [
+              "Desktop"
+            ],
+            "type-goal": [
+              "Desktop"
+            ],
+            "platforms-ready": [
+              "macOS"
+            ],
+            "platforms-goal": [
+              "macOS"
+            ],
+            "languages": [
+              "Swift"
+            ],
+            "frameworks": [],
+            "name": "Craid",
+            "description": "macOS command line tool to help me on my machine",
+            "features": [
+              "Delete moodle directory",
+              "Get Version Info",
+              "Use different commands"
+            ],
+            "connection": {
+              "repo": "https://github.com/Julessh05/Craid",
+              "playstore": null,
+              "appstore": null,
+              "fdroid": null,
+              "pubdev": null,
+              "youtrack": null
+            },
+            "first-version-released": true,
+            "activeSupport": false
+          }
+        }
+      }
+    }
+  }
+}

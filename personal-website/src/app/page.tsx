@@ -1,12 +1,22 @@
 import styles from "./page.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import QuickInfoBanner from "@/components/QuickInfoBanner";
+import { setBannerCookie, getBannerCookie } from "@/app/objects/cookieStore";
 
-export default function Home() {
+export default async function Home() {
+  const bannerActive = await getBannerCookie();
+  console.log(`Home page rendered with bannerActive: ${bannerActive}`);
+
+  const handleBannerCallback = async (val: boolean) => {
+    "use server";
+    await setBannerCookie(val);
+  };
+
   return (
-    <main className={styles.main}>
-      <div className={styles.background}>
-        <div className={styles.profile}>
+    <main>
+      <div>
+        <div>
           <Image
             src="/me.jpg"
             alt="A Portrait of myself"
@@ -15,87 +25,21 @@ export default function Home() {
             className={styles.avatar}
           />
           <h1>Julian Schumacher</h1>
-          <h2>Cyber Security Student</h2>
+          <p>
+            Hi!
+            <br />
+            I'm Julian, a passionate developer and tech enthusiast.
+            Welcome to my personal website, where you can get to know me better.
+            As already mentioned in the info banner, for professional inquiries, please visit my {" "} { /* {" "} implies a space */}
+            <Link href="https://juliandevelops.com">professional website</Link>.
+            <br />
+          </p>
         </div>
-        <div className={styles.links}>
-          <div className={styles.outerLinkDiv}>
-            <h3>Socials</h3>
-            <p>Let&rsquo;s connect</p>
-            <div className={styles.innerLinkDiv}>
-              <ul>
-                <li>
-                  <Link href="https://github.com/juliandevelops" target="_blank">
-                    Github
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://www.linkedin.com/in/julian-schumacher-b6005021a/"
-                    target="_blank"
-                  >
-                    LinkedIn
-                  </Link>
-                </li>
-                <li>
-                  < Link href="https://x.com/julian_develops" target="_blank">
-                    X
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://instagram.com/juliandevelops" target="_blank">
-                    Instagram
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://www.patreon.com/juliandevelops"
-                    target="_blank"
-                  >
-                    Patreon
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className={styles.outerLinkDiv}>
-            <h3>Other Links</h3>
-            <p>Projects and Connections</p>
-            <div className={styles.innerLinkDiv}>
-              <ul>
-                <li>
-                  <Link href="https://v3s.tech" target="_blank">
-                    Virtual Safety & Security Systems
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://juliandevelops.com"
-                    target="_blank"
-                  >
-                    Julian Develops
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://apps.apple.com/de/developer/julian-schumacher/id1681063160"
-                    target="_blank"
-                  >
-                    App Store
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://play.google.com/store/apps/developer?id=Julian+Schumacher"
-                    target="_blank"
-                  >
-                    Play Store
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div >
+      </div>
+      <QuickInfoBanner
+        currentValue={bannerActive}
+        setCallback={handleBannerCallback}
+      />
     </main >
   );
 }

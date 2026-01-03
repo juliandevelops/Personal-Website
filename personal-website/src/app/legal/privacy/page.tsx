@@ -12,6 +12,10 @@ export default function Privacy() {
             <h1> Website </h1>
             <h2 className={styles.heading}> General </h2>
             <p>
+                This Website uses cookies to store information like the disabled information banner.
+                No personal or sensitive information is being stored in these cookies. Furthermore, no tracking is implemented via these cookies.
+                You can disable cookies in your browser settings, but that may lead to
+                reduced functionality of this Website.
                 This Website itself does not use Cookies and / or tracking to track you.
                 However, the Hoster of the Website and / or provider may do that.
                 Those privacy policies are here to find:
@@ -36,7 +40,7 @@ export default function Privacy() {
             <h2 className={styles.heading}> Flutter Specific </h2>
             <p>
                 For some of my Apps i use <a href="https://dart.dev">Googles Language Dart</a> and the corresponding <a
-                href="https://flutter.dev">Framework Flutter</a>.
+                    href="https://flutter.dev">Framework Flutter</a>.
                 You can find more about these languages on the linked Sites.
                 Because Flutter and Dart are based on the community and packages / plugins
                 developed by the community, not every code, that is used in my App
@@ -50,7 +54,7 @@ export default function Privacy() {
                 please refer to the Github repository of this App, mostly linked in the Store or
                 the App itself.
                 If you do not find the link, you can <a href="https://github.com/Julessh05?tab=repositories">search
-                here</a>.
+                    here</a>.
             </p>
             <h2 className={styles.heading}> Swift Specific </h2>
             <p>

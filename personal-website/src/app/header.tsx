@@ -1,26 +1,16 @@
-import Link from "next/link"
-import styles from "./header.module.scss"
+'use client';
+
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+    const pathname = usePathname();
     return (
-        <nav className={styles.nav}>
-            <ul>
-                <li>
-                    <Link href='/'>Home</Link>
-                </li>
-                <li>
-                    <Link href="/projects/">Projects</Link>
-                </li>
-                <li>
-                    <Link href='/blog'>Blog</Link>
-                </li>
-                <li>
-                    <Link href='/legal/privacy/'>Privacy Policy</Link>
-                </li>
-                <li>
-                    <Link href='/support/'>Support</Link>
-                </li>
-            </ul>
-        </nav>
-    )
+        <header>
+            {pathname !== "/" && (
+                <a href="/" style={{ textDecoration: "underline" }}>
+                    &larr; Back to Home
+                </a>
+            )}
+        </header>
+    );
 }

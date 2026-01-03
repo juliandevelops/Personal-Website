@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "./globals.scss";
 import React from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "./header";
+import Footer from "./footer";
 
-const _ = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Julian Schumacher",
@@ -76,11 +77,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
       <body>
         <Header />
         {children}
         <SpeedInsights />
+        <Footer />
       </body>
     </html>
   );

@@ -1,0 +1,18 @@
+.links {
+
+    justify-content: space-evenly;
+
+    .linkColumn {
+        display: block;
+
+        img {
+            margin: 0px 8px;
+            width: 20px;
+            height: 20px;
+        }
+
+        a {
+            padding: 0;
+        }
+    }
+}

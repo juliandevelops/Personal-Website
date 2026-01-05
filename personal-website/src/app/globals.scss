@@ -5,6 +5,12 @@
   --text-color: #2A2A2A;
   --headline-color: #1E1E1E;
   --accent-color: #2F4A3C;
+  --background-muted: #E9E3D7;
+  --background-contrast: #E0D7C7;
+  --background-rgb-dark: #E2D8C7;
+  --text-muted: #4F4F4F;
+  --outline: rgba(47, 74, 60, 0.3);
+  --shadow: 0 24px 50px rgba(47, 74, 60, 0.16);
   overscroll-behavior: default;
 }
 
@@ -12,12 +18,18 @@ body {
   padding: 0;
   margin: 0 0 3rem;
   color: var(--text-color);
+  font-family: var(--font-body), "Source Sans 3", sans-serif;
+  min-height: 65vh;
   background-color: var(--background);
+  background-image: radial-gradient(circle at top left, #F7F2EA 0%, rgba(247, 242, 234, 0) 50%),
+    radial-gradient(circle at 20% 40%, #E7DEC9 0%, rgba(231, 222, 201, 0) 55%);
+  background-attachment: fixed;
 }
 
 h1 {
   color: var(--headline-color);
   font-size: 24px;
+  font-family: var(--font-display), "Fraunces", serif;
   text-align: left;
   padding: 1rem 0rem;
 
@@ -33,6 +45,7 @@ h1 {
 h2 {
   color: var(--headline-color);
   font-size: 20px;
+  font-family: var(--font-display), "Fraunces", serif;
   padding: 0.7rem 0rem;
 
   @media (min-width: 640px) {
@@ -47,6 +60,7 @@ h2 {
 h3 {
   color: var(--headline-color);
   font-size: 18px;
+  font-family: var(--font-display), "Fraunces", serif;
   padding: 0.5rem 0rem;
 
   @media (min-width: 768px) {
@@ -56,18 +70,22 @@ h3 {
 
 h4 {
   color: var(--headline-color);
+  font-family: var(--font-display), "Fraunces", serif;
 }
 
 h5 {
   color: var(--headline-color);
+  font-family: var(--font-display), "Fraunces", serif;
 }
 
 h6 {
   color: var(--headline-color);
+  font-family: var(--font-display), "Fraunces", serif;
 }
 
 a {
   text-decoration: underline;
+  color: inherit;
 }
 
 main {
@@ -75,7 +93,7 @@ main {
   padding: 6rem 1rem 1rem;
   text-align: left;
   margin: auto;
-  max-width: 800px;
+  max-width: 980px;
   // Inspiration: https: //stackoverflow.com/questions/643879/css-to-make-html-page-footer-stay-at-bottom-of-the-page-with-a-minimum-height-b
   min-height: 80vh;
 
@@ -88,15 +106,24 @@ main {
   }
 }
 
+header {
+  min-height: 5vh;
+}
+
 footer {
   bottom: 0;
   width: 100%;
-  background-color: var(--color-background);
-  color: var(--color-foreground);
+  background-color: var(--background);
+  background-image: linear-gradient(
+    180deg,
+    rgba(243, 239, 232, 0) 0%,
+    var(--background) 45%
+  );
+  color: var(--text-color);
   text-align: center;
   padding: 1rem 0.5rem;
   vertical-align: bottom;
-  min-height: 10vh;
+  min-height: 30vh;
 
   @media (min-width: 640px) {
     padding: 1rem;

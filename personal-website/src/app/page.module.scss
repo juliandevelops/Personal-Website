@@ -1,57 +1,93 @@
-.background {
-  background-color: var(--background-rgb-dark);
-  background-position: center;
+.main {
+  padding-top: 3.5rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.hero {
+  display: grid;
+  gap: 3rem;
   align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 25px;
-  border-radius: 25px;
+  position: relative;
 }
 
-.backgroundMobile {
-  margin: 150px auto;
-  background-color: var(--background-rgb-dark);
-  background-position: center;
-  display: block;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 50px;
-  border-radius: 25px;
-  clear: both;
-  text-align: center;
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.column {
-  display: inline-grid;
-  flex: 1;
-  padding: 20px 25px;
+.eyebrow {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0;
 }
 
-.content {
-  padding-top: 4.5rem;
+.lede {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0;
 }
 
-.innerLinkDiv {
-  padding-top: 6px;
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
-.outerLinkDiv {
-  padding-top: 20px;
+.pillGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.spacer {
-  margin: 150px;
-  height: 700px;
+.pill {
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background-color: var(--background-contrast);
+  font-size: 0.85rem;
 }
 
-.profile {
-  margin: 20px;
+.heroVisual {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.portraitWrap {
+  width: fit-content;
+  border-radius: 24px;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, var(--background-muted), #F7F2EA);
+  box-shadow: var(--shadow);
+}
+
+.portrait {
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.noteCard {
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px solid var(--outline);
+  box-shadow: var(--shadow);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding-top: 4.5rem;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    gap: 4rem;
+  }
 }

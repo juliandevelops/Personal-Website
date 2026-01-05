@@ -1,0 +1,23 @@
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  padding: 1.25rem 1.5rem;
+  background-color: var(--background-muted);
+  border-radius: 18px;
+  border: 1px solid var(--outline);
+  box-shadow: 0 18px 40px rgba(42, 42, 42, 0.08);
+}
+
+.card p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

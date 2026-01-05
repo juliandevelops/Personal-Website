@@ -1,0 +1,27 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--background);
+  padding: 1.5rem 1rem 0.5rem;
+  border-bottom: 1px solid rgba(47, 74, 60, 0.12);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--outline);
+  background-color: var(--background-muted);
+  color: var(--text-color);
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.backLink:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(47, 74, 60, 0.12);
+}

@@ -8,15 +8,29 @@ export default function Footer() {
             <p>© 2026 Julian Schumacher. All rights reserved.</p>
             <p style={{ color: "#B0892E" }}>
                 <Link href="/status">Info:</Link>
-                Website still in construction
+                Personal site in progress — updates are happening.
             </p>
             <div className={styles.links}>
                 <div className={styles.linkColumn}>
                     <h3>Other websites</h3>
                     <div>
+                        <Image
+                            src="/juliandevelops_icon.png"
+                            alt="Juliandevelops Icon"
+                            width={12.5}
+                            height={12.5}
+                            style={{ borderRadius: "50%" }}
+                        />
                         <Link href="https://juliandevelops.com">juliandevelops.com</Link>
                     </div>
                     <div>
+                        <Image
+                            src="/v3s_icon.png"
+                            alt="V3S Icon"
+                            width={12.5}
+                            height={12.5}
+                            style={{ borderRadius: "50%" }}
+                        />
                         <Link href="https://v3s.tech">v3s.tech</Link>
                     </div>
                 </div>

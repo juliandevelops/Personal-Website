@@ -35,7 +35,7 @@ export default function StatusPage() {
             <p>
                 This website is still in construction.
                 Some features may not work as intended on some devices or browsers.
-                If you encounter any issues, please feel free to <a href="/contact">contact me</a>.
+                If you encounter any issues, please feel free to <a href="mailto:support@julianschumacher.dev">contact me</a>.
                 The most recent state of development can be found on <Link href="https://github.com/juliandevelops/personal-website" target="_blank">GitHub</Link>.
             </p>
             <h1>System Status</h1>

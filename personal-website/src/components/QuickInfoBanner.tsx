@@ -6,7 +6,6 @@ import styles from './QuickInfoBanner.module.scss';
 export default function QuickInfoBanner({
     currentValue, setCallback
 }: { currentValue?: boolean, setCallback: (value: boolean) => void }) {
-    console.log(`QuickInfoBanner rendered with currentValue: ${currentValue}`);
     if (currentValue) {
         return (
             <button
@@ -25,13 +24,13 @@ export default function QuickInfoBanner({
             {!currentValue && (
                 <div className={styles.banner}>
                     <div className={styles.content}>
-                        <h3>Quick Information</h3>
+                        <h3>Quick note</h3>
                         <p>
-                            If you&rsquo;re looking to connect in a professional matter, please refer to my <Link href="https://juliandevelops.com">professional website</Link>.
+                            For professional topics, please visit my <Link href="https://juliandevelops.com">professional website</Link>.
                             <br />
-                            If you want to get to know me personally - or you already do - you&rsquo;re welcome to stay here and browse a bit.
+                            If you want to know the person behind the work, you are in the right place.
                             <br />
-                            Welcome!
+                            Welcome and have a calm scroll.
                         </p>
                     </div>
                     <button

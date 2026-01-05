@@ -9,12 +9,19 @@ export default function Support() {
     return (
         <main>
             <h1>Support</h1>
-            <p>If you need support, you can reach the support via <a
-                href="mailto:support@julianschumacher.dev?subject=Support Request">E-mail</a>.</p>
-            <p>For information regarding current issues, problems and projects, please first refer to <a
-                href="https://github.com/Julessh05">Github</a>.</p>
-            <p>If you search for further information regarding a specific project, please refer to that project&rsquo;s
-                Github Repository and it&rsquo;s issues. You can find the projects <Link href={"/projects"}>here</Link>.
+            <p>
+                Need help or have a question? Feel free to send me an{" "}
+                <a href="mailto:support@julianschumacher.dev?subject=Support Request">
+                    email
+                </a>.
+            </p>
+            <p>
+                For technical topics and current projects, the fastest updates are on{" "}
+                <a href="https://github.com/Julessh05">GitHub</a>.
+            </p>
+            <p>
+                For professional collaboration, please use my{" "}
+                <Link href="https://juliandevelops.com">professional website</Link>.
             </p>
         </main>
     )

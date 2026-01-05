@@ -90,6 +90,9 @@ export default function Footer() {
                 <Link href="mailto:support@julianschumacher.dev?subject=Support Request [via Website]&body=[Support request triggered by website footer]">Support request</Link>
                 <Link href="/legal/privacy">Privacy Policy</Link>
             </div>
+            <div>
+                <p>Generative AI was used to assist in the creation of this website.</p>
+            </div>
         </footer >
     )
 }

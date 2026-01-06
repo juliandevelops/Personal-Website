@@ -32,7 +32,7 @@ export default function Home() {
           </div>
           <div className={styles.pillGroup}>
             <span className={styles.pill}>Based in Germany</span>
-            <span className={styles.pill}>Web + App</span>
+            <span className={styles.pill}>Security focused</span>
             <span className={styles.pill}>Calm, clear, dependable</span>
           </div>
         </div>
@@ -49,9 +49,8 @@ export default function Home() {
           </div>
           <div className={styles.noteCard}>
             <p>
-              I like honest interfaces, clear language, and things that outlive
-              a trend. If something feels effortless, I probably refined it for
-              a while.
+              I like simple user interfaces with minimalistic design.
+              If something is complicated, I try to make it feel simple.
             </p>
           </div>
         </div>
@@ -60,13 +59,12 @@ export default function Home() {
       <Section id="story" label="Story" title="How I work">
         <SectionBody>
           <p>
-            I enjoy building products that feel quiet but precise. I start with
-            the experience, sketch quickly, prototype, and then refine until the
-            details feel cohesive.
+            I enjoy building products that feel simple and effective.
+            Products shouldn't call attention to themselves — they should work without thinking about it.
           </p>
           <p>
-            Outside of client work I keep small side quests running: tiny tools,
-            automations, and experiments that let me try new ideas.
+            Next to my main projects I find new stuff to work on every once in a while to learn new technologies and approaches.
+            This keeps me sharp and allows me to bring fresh ideas into my main work.
           </p>
         </SectionBody>
       </Section>
@@ -78,12 +76,12 @@ export default function Home() {
             description="Design that explains itself without extra noise."
           />
           <InfoCard
-            title="Calm speed"
-            description="Move fast, but never feel frantic."
+            title="Minimalism"
+            description="Keep it simple, focus on what matters."
           />
           <InfoCard
             title="Trust"
-            description="Transparent process, clean engineering."
+            description="Transparent process, clean engineering, security first."
           />
         </InfoCardGrid>
       </Section>
@@ -99,11 +97,11 @@ export default function Home() {
             {
               label: "Learning",
               description:
-                "Exploring motion ideas that stay subtle but noticeable.",
+                "Explore new technolgies and experiment with fresh ideas.",
             },
             {
               label: "Everyday",
-              description: "Morning coffee, evening music, lots of code between.",
+              description: "Gym, music and 3D work to stay balanced.",
             },
           ]}
         />
@@ -112,12 +110,12 @@ export default function Home() {
       <Section id="interests" label="Interests" title="What fascinates me off screen">
         <InfoCardGrid>
           <InfoCard
-            title="Photography"
-            description="Quiet scenes, strong contrasts, patient framing."
+            title="3D modeling"
+            description="Modeling, texturing and rendering with Blender and 3D engines."
           />
           <InfoCard
-            title="Audio"
-            description="Good sound, calm playlists, clean vocals."
+            title="Music"
+            description="Music theory, production and sound design."
           />
           <InfoCard
             title="Movement"

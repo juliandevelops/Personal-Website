@@ -13,7 +13,7 @@ export default function Footer() {
             <div className={styles.links}>
                 <div className={styles.linkColumn}>
                     <h3>Other websites</h3>
-                    <div>
+                    <div className={styles.linkRow}>
                         <Image
                             src="/juliandevelops_icon.png"
                             alt="Juliandevelops Icon"
@@ -23,7 +23,7 @@ export default function Footer() {
                         />
                         <Link href="https://juliandevelops.com">juliandevelops.com</Link>
                     </div>
-                    <div>
+                    <div className={styles.linkRow}>
                         <Image
                             src="/v3s_icon.png"
                             alt="V3S Icon"
@@ -36,7 +36,7 @@ export default function Footer() {
                 </div>
                 <div className={styles.linkColumn}>
                     <h3>Work</h3>
-                    <div>
+                    <div className={styles.linkRow}>
                         <Image
                             src="/socials/github_icon.svg"
                             alt="GitHub Icon"
@@ -45,7 +45,7 @@ export default function Footer() {
                         />
                         <Link href="https://github.com/juliandevelops">@juliandevelops</Link>
                     </div>
-                    <div>
+                    <div className={styles.linkRow}>
                         <Image
                             src="/socials/linkedin_icon.png"
                             alt="LinkedIn Icon"
@@ -57,7 +57,7 @@ export default function Footer() {
                 </div>
                 <div className={styles.linkColumn}>
                     <h3>Socials</h3>
-                    <div>
+                    <div className={styles.linkRow}>
                         <Image
                             src="/socials/instagram_icon.svg"
                             alt="Instagram Icon"
@@ -66,7 +66,7 @@ export default function Footer() {
                         />
                         <Link href="https://instagram.com/jules.idle">@jules.idle</Link>
                     </div>
-                    <div>
+                    <div className={styles.linkRow}>
                         <Image
                             src="/socials/x_icon.png"
                             alt="X Icon"
@@ -75,7 +75,7 @@ export default function Footer() {
                         />
                         <Link href="https://x.com/julesidle">@julesidle</Link>
                     </div>
-                    <div>
+                    <div className={styles.linkRow}>
                         <Image
                             src="/socials/tiktok_icon.png"
                             alt="TikTok Icon"

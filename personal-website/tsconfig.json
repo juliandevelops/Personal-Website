@@ -20,7 +20,7 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@/objects": ["src/objects/*"]
+      "@/objects": ["./src/objects/*"]
     }
   },
   "include": [

@@ -124,6 +124,19 @@ export default function Home() {
         </InfoCardGrid>
       </Section>
 
+      <Section id="story" label="Story" title="What moves me">
+        <SectionBody>
+          <p>
+            I believe in privacy and security as a fundamental right.
+            In a world where data is often exploited, I am committed to building products that respect and protect user information.
+          </p>
+          <p>
+            I also believe, that technology should be used intentionally and mindfully.
+            I believe that protecting users is a shared responsibility of developers, companies, and users alike.
+          </p>
+        </SectionBody>
+      </Section>
+
       <Section id="connect" label="Connect" title="Stay in touch">
         <SectionBody>
           <p>

@@ -12,3 +12,8 @@ export async function getBannerCookie() {
     const bannerCookie = cookieStore.get(bannerCookieName);
     return bannerCookie ? bannerCookie.value === 'true' : false;
 }
+
+export async function deleteBannerCookie() {
+    const cookieStore = await cookies();
+    cookieStore.delete(bannerCookieName);
+}

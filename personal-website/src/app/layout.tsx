@@ -5,6 +5,8 @@ import React from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "./header";
 import Footer from "./footer";
+import QuickInfoBanner from "@/components/QuickInfoBanner";
+import { setBannerCookie, getBannerCookie } from "@/objects/cookieStore";
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -80,11 +82,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const bannerActive = await getBannerCookie();
+
+  const handleBannerCallback = async (val: boolean) => {
+    "use server";
+    await setBannerCookie(val);
+  };
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
       <body>
@@ -92,6 +100,10 @@ export default function RootLayout({
         {children}
         <SpeedInsights />
         <Footer />
+        <QuickInfoBanner
+          currentValue={bannerActive}
+          setCallback={handleBannerCallback}
+        />
       </body>
     </html>
   );

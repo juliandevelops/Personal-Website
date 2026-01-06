@@ -1,12 +1,15 @@
 import Link from "next/link"
 import styles from "./page.module.scss"
-
-export const metadata = {
-    title: 'Julian Schumacher - Privacy',
-    description: 'Privacy policy regarding my projects',
-}
+import { deleteBannerCookie } from "@/objects/cookieStore";
+import ResetCookieButton from "@/components/ResetCookieButton";
 
 export default function Privacy() {
+
+    const handleResetClick = async () => {
+        "use server";
+        await deleteBannerCookie();
+    }
+
     return (
         <main className={styles.main}>
             <h1> Website </h1>
@@ -16,16 +19,20 @@ export default function Privacy() {
                 No personal or sensitive information is being stored in these cookies. Furthermore, no tracking is implemented via these cookies.
                 You can disable cookies in your browser settings, but that may lead to
                 reduced functionality of this Website.
-                This Website itself does not use Cookies and / or tracking to track you.
-                However, the Hoster of the Website and / or provider may do that.
-                Those privacy policies are here to find:
+                You can delete the cookie for the information banner
+                by clicking the &ldquo;Reset Banner&rdquo; button at the bottom of the page.
+            </p>
+            <h2 className={styles.heading}> Hosting and Provider </h2>
+            <p>
+                Adding to that, the Hoster of the Website and / or provider may record data.
+                Those privacy policies can be found here:
             </p>
             <ul className={styles.webPrivacyList}>
                 <li>
-                    <a href="https://vercel.com/legal/privacy-policy">Hoster</a>
+                    <a href="https://vercel.com/legal/privacy-policy">Vercel Privacy Policy</a>
                 </li>
                 <li>
-                    <a href="https://www.ionos.de/terms-gtc/datenschutzerklaerung/">Provider</a>
+                    <a href="https://www.strato.de/datenschutz/">Strato Privacy Policy</a>
                 </li>
             </ul>
             <h1> Apps </h1>
@@ -66,6 +73,10 @@ export default function Privacy() {
                 To read more about storing and security, please refer to the projects own
                 page, all Projects can be found <Link href="/">here</Link>.
             </p>
+            <section>
+                <h2>Reset cookies</h2>
+                <ResetCookieButton callback={handleResetClick} />
+            </section>
         </main>
 
     )

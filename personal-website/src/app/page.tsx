@@ -1,20 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import QuickInfoBanner from "@/components/QuickInfoBanner";
-import { setBannerCookie, getBannerCookie } from "@/app/objects/cookieStore";
 import styles from "./page.module.scss";
 import ActionLink from "@/components/home/ActionLink";
 import Section, { SectionBody } from "@/components/home/Section";
 import InfoCard, { InfoCardGrid } from "@/components/home/InfoCard";
 import Timeline from "@/components/home/Timeline";
 
-export default async function Home() {
-  const bannerActive = await getBannerCookie();
-
-  const handleBannerCallback = async (val: boolean) => {
-    "use server";
-    await setBannerCookie(val);
-  };
+export default function Home() {
 
   return (
     <main className={styles.main}>
@@ -153,11 +145,6 @@ export default async function Home() {
           </div>
         </SectionBody>
       </Section>
-
-      <QuickInfoBanner
-        currentValue={bannerActive}
-        setCallback={handleBannerCallback}
-      />
     </main>
   );
 }

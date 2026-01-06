@@ -1,0 +1,35 @@
+.resetButton {
+    text-decoration: none;
+    padding: 0.75rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+
+    background-color: var(--background-muted);
+    color: var(--text-color);
+    border: 1px solid var(--outline);
+}
+
+.resetButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(47, 74, 60, 0.12);
+}
+
+.resetButton:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+    .resetButton {
+        width: 100%;
+        text-align: center;
+    }
+}

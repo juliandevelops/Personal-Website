@@ -23,16 +23,6 @@ export default function Footer() {
                         />
                         <Link href="https://juliandevelops.com">juliandevelops.com</Link>
                     </div>
-                    <div className={styles.linkRow}>
-                        <Image
-                            src="/v3s_icon.png"
-                            alt="V3S Icon"
-                            width={12.5}
-                            height={12.5}
-                            style={{ borderRadius: "50%" }}
-                        />
-                        <Link href="https://v3s.tech">v3s.tech</Link>
-                    </div>
                 </div>
                 <div className={styles.linkColumn}>
                     <h3>Work</h3>

@@ -32,6 +32,9 @@ export default function QuickInfoBanner({
                             <br />
                             Welcome and have a calm scroll.
                         </p>
+                        <h4>Cookies</h4>
+                        <p>This website uses cookies to enhance your experience. By continuing to browse, you agree to our use of cookies.</p>
+                        <Link href="/legal/privacy">Learn more about our cookie policy</Link>
                     </div>
                     <button
                         className={styles.closeButton}

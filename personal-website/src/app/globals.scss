@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@use "tailwindcss" as *;
 
 :root {
   --background: #F3EFE8;
@@ -114,11 +114,9 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: var(--background);
-  background-image: linear-gradient(
-    180deg,
-    rgba(243, 239, 232, 0) 0%,
-    var(--background) 45%
-  );
+  background-image: linear-gradient(180deg,
+      rgba(243, 239, 232, 0) 0%,
+      var(--background) 45%);
   color: var(--text-color);
   text-align: center;
   padding: 1rem 0.5rem;

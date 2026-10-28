@@ -1,40 +1,65 @@
 .button {
   text-decoration: none;
-  padding: 0.75rem 1.4rem;
-  border-radius: 999px;
+  padding: 0.6rem 1.1rem;
+  border-radius: 3px;
   font-weight: 600;
+  font-size: 0.95rem;
   border: 1px solid transparent;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  width: fit-content;
+  transition: background-color 0.15s ease, color 0.15s ease,
+    border-color 0.15s ease;
 }
 
 .primary {
   background-color: var(--accent-color);
-  color: #fff;
-  box-shadow: var(--shadow);
+  color: #F7F4EE;
+
+  &:hover {
+    background-color: var(--accent-color-hover);
+    color: #F7F4EE;
+  }
 }
 
 .secondary {
-  background-color: var(--background-muted);
-  color: var(--text-color);
-  border: 1px solid var(--outline);
+  background-color: transparent;
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+
+  &:hover {
+    background-color: rgba(47, 74, 60, 0.08);
+  }
+}
+
+.inverse {
+  background-color: transparent;
+  color: #F5F1E8;
+  border-color: rgba(245, 241, 232, 0.7);
+
+  &:hover {
+    background-color: rgba(245, 241, 232, 0.14);
+    color: #F5F1E8;
+  }
 }
 
 .ghost {
   background-color: transparent;
-  border: 1px solid var(--outline);
+  border: none;
+  padding: 0;
   color: var(--text-color);
-}
+  text-decoration: underline;
+  text-underline-offset: 3px;
 
-.button:hover {
-  transform: translateY(-2px);
+  &:hover {
+    color: var(--accent-color);
+  }
 }
 
 @media (max-width: 480px) {
-  .button {
+  .button:not(.ghost) {
     width: 100%;
     text-align: center;
   }

@@ -1,0 +1,47 @@
+.list {
+  margin: 0;
+}
+
+.item {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--hairline);
+
+  &:last-child {
+    border-bottom: 1px solid var(--hairline);
+    padding-bottom: 1.75rem;
+  }
+
+  @media (min-width: 640px) {
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    padding: 1.75rem 0;
+  }
+}
+
+.term {
+  font-family: var(--font-display), "IBM Plex Serif", serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--headline-color);
+  margin: 0;
+}
+
+.index {
+  display: block;
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.description {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  align-self: end;
+}

@@ -2,95 +2,113 @@
 
 :root {
   --background: #F3EFE8;
+  --paper: #F8F5EF;
+  --ink: #1E1E1E;
   --text-color: #2A2A2A;
   --headline-color: #1E1E1E;
   --accent-color: #2F4A3C;
+  --accent-color-hover: #24392E;
   --background-muted: #E9E3D7;
   --background-contrast: #E0D7C7;
-  --background-rgb-dark: #E2D8C7;
-  --text-muted: #4F4F4F;
-  --outline: rgba(47, 74, 60, 0.3);
-  --shadow: 0 24px 50px rgba(47, 74, 60, 0.16);
+  --text-muted: #5A5750;
+  --outline: rgba(46, 42, 35, 0.4);
+  --hairline: rgba(46, 42, 35, 0.22);
+  --hairline-strong: rgba(46, 42, 35, 0.45);
   overscroll-behavior: default;
 }
 
 body {
   padding: 0;
-  margin: 0 0 3rem;
+  margin: 0;
   color: var(--text-color);
-  font-family: var(--font-body), "Source Sans 3", sans-serif;
-  min-height: 65vh;
+  font-family: var(--font-body), "IBM Plex Sans", sans-serif;
+  min-height: 100vh;
   background-color: var(--background);
-  background-image: radial-gradient(circle at top left, #F7F2EA 0%, rgba(247, 242, 234, 0) 50%),
-    radial-gradient(circle at 20% 40%, #E7DEC9 0%, rgba(231, 222, 201, 0) 55%);
-  background-attachment: fixed;
+}
+
+// Print grain: a faint paper texture instead of gradients or glow.
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.032;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 h1 {
   color: var(--headline-color);
-  font-size: 24px;
-  font-family: var(--font-display), "Fraunces", serif;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-family: var(--font-display), "IBM Plex Serif", serif;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
   text-align: left;
-  padding: 1rem 0rem;
-
-  @media (min-width: 640px) {
-    font-size: 28px;
-  }
-
-  @media (min-width: 768px) {
-    font-size: 32px;
-  }
+  padding: 1.5rem 0 0;
+  margin: 0;
 }
 
 h2 {
   color: var(--headline-color);
-  font-size: 20px;
-  font-family: var(--font-display), "Fraunces", serif;
-  padding: 0.7rem 0rem;
-
-  @media (min-width: 640px) {
-    font-size: 22px;
-  }
-
-  @media (min-width: 768px) {
-    font-size: 24px;
-  }
+  font-size: clamp(1.4rem, 3vw, 1.75rem);
+  font-family: var(--font-display), "IBM Plex Serif", serif;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0;
+  margin: 0;
 }
 
 h3 {
   color: var(--headline-color);
-  font-size: 18px;
-  font-family: var(--font-display), "Fraunces", serif;
-  padding: 0.5rem 0rem;
-
-  @media (min-width: 768px) {
-    font-size: 20px;
-  }
+  font-size: 1.2rem;
+  font-family: var(--font-display), "IBM Plex Serif", serif;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
 }
 
 h4 {
   color: var(--headline-color);
-  font-family: var(--font-display), "Fraunces", serif;
+  font-family: var(--font-display), "IBM Plex Serif", serif;
+  font-weight: 600;
 }
 
 h5 {
   color: var(--headline-color);
-  font-family: var(--font-display), "Fraunces", serif;
+  font-family: var(--font-display), "IBM Plex Serif", serif;
+  font-weight: 600;
 }
 
 h6 {
   color: var(--headline-color);
-  font-family: var(--font-display), "Fraunces", serif;
+  font-family: var(--font-display), "IBM Plex Serif", serif;
+  font-weight: 600;
 }
 
 a {
   text-decoration: underline;
+  text-underline-offset: 3px;
   color: inherit;
+
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+// Small suffix arrow for external references, instead of loud inline glyphs.
+a[href^="http"]::after {
+  content: "↗";
+  font-size: 0.65em;
+  vertical-align: super;
+  margin-left: 0.2em;
+  opacity: 0.55;
+  text-decoration: none;
 }
 
 main {
   vertical-align: top;
-  padding: 6rem 1rem 1rem;
+  padding: 3.5rem 1rem 1rem;
   text-align: left;
   margin: auto;
   max-width: 980px;
@@ -98,62 +116,10 @@ main {
   min-height: 80vh;
 
   @media (min-width: 640px) {
-    padding: 6rem 1.5rem 1rem;
+    padding: 3.5rem 1.5rem 1rem;
   }
 
   @media (min-width: 768px) {
-    padding: 6rem 2rem 1rem;
-  }
-}
-
-header {
-  min-height: 5vh;
-}
-
-footer {
-  bottom: 0;
-  width: 100%;
-  background-color: var(--background);
-  background-image: linear-gradient(180deg,
-      rgba(243, 239, 232, 0) 0%,
-      var(--background) 45%);
-  color: var(--text-color);
-  text-align: center;
-  padding: 1rem 0.5rem;
-  vertical-align: bottom;
-  min-height: 30vh;
-
-  @media (min-width: 640px) {
-    padding: 1rem;
-  }
-
-  p {
-    margin: 0.5rem 0;
-    font-size: 14px;
-
-    @media (min-width: 640px) {
-      font-size: 16px;
-    }
-  }
-
-  div {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 1rem;
-
-    @media (min-width: 640px) {
-      flex-direction: row;
-      justify-content: center;
-      gap: 0;
-    }
-  }
-
-  a {
-    padding: 0.5rem;
-
-    @media (min-width: 640px) {
-      padding: 0rem 1rem;
-    }
+    padding: 4rem 2rem 1.5rem;
   }
 }

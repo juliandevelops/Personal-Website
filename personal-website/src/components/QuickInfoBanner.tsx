@@ -29,8 +29,6 @@ export default function QuickInfoBanner({
                             For professional topics, please visit my <Link href="https://juliandevelops.com">professional website</Link>.
                             <br />
                             If you want to know the person behind the work, you are in the right place.
-                            <br />
-                            Welcome and have a calm scroll.
                         </p>
                         <h4>Cookies</h4>
                         <p>This website uses cookies to enhance your experience. By continuing to browse, you agree to our use of cookies.</p>

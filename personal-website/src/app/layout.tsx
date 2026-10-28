@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Source_Sans_3 } from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Serif } from "next/font/google";
 import "./globals.scss";
 import React from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -8,12 +8,13 @@ import Footer from "./footer";
 import QuickInfoBanner from "@/components/QuickInfoBanner";
 import { setBannerCookie, getBannerCookie } from "@/objects/cookieStore";
 
-const display = Fraunces({
+const display = IBM_Plex_Serif({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["400", "600", "700"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
-const body = Source_Sans_3({
+const body = IBM_Plex_Sans({
   subsets: ["latin"],
   variable: "--font-body",
   weight: ["400", "500", "600"],
@@ -21,7 +22,7 @@ const body = Source_Sans_3({
 
 export const metadata: Metadata = {
   title: "Julian Schumacher",
-  description: "My personal Website",
+  description: "The personal half of Julian Schumacher — what he's up to, what he's into, and the occasional thought.",
   publisher: "Julian Schumacher",
   applicationName: "Next",
   generator: "Next.js",

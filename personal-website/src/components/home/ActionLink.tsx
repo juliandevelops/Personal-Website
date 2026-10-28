@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./ActionLink.module.scss";
 
 type ActionLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "ghost" | "inverse";
 };
 
 export default function ActionLink({

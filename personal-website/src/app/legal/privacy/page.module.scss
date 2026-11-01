@@ -2,24 +2,54 @@
   text-align: left;
 }
 
-.main h1 {
-  text-align: center;
-}
-
-.main h2 {
-  text-align: left;
-}
-
-.main p {
-  text-align: left;
-}
-
 .heading {
-  padding-top: 2vh;
+  padding-top: 2.5rem;
 }
 
-.webPrivacyList {
-  list-style: inside;
-  text-decoration: none;
-  text-align: left;
+.updated {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.address {
+  line-height: 1.7;
+}
+
+.list {
+  padding-left: 1.25rem;
+
+  li {
+    margin: 0.35rem 0;
+  }
+}
+
+.cookieTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.92rem;
+
+  th,
+  td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  th {
+    font-weight: 600;
+    border-bottom: 1px solid var(--hairline-strong);
+  }
+
+  code {
+    font-size: 0.85em;
+  }
+}
+
+.cookieSettings {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--hairline-strong);
 }

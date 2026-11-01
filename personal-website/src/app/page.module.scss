@@ -112,6 +112,12 @@
       white-space: nowrap;
     }
   }
+
+  @media (max-width: 380px) {
+    dd a {
+      white-space: normal;
+    }
+  }
 }
 
 .panel {

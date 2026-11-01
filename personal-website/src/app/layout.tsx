@@ -6,7 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "./header";
 import Footer from "./footer";
 import QuickInfoBanner from "@/components/QuickInfoBanner";
-import { setBannerCookie, getBannerCookie } from "@/objects/cookieStore";
+import { setConsent, getConsent, type ConsentValue } from "@/objects/cookieStore";
 
 const display = IBM_Plex_Serif({
   subsets: ["latin"],
@@ -88,22 +88,22 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const bannerActive = await getBannerCookie();
+  const consent = await getConsent();
 
-  const handleBannerCallback = async (val: boolean) => {
+  const handleConsentCallback = async (val: ConsentValue) => {
     "use server";
-    await setBannerCookie(val);
+    await setConsent(val);
   };
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
       <body>
         <Header />
         {children}
-        <SpeedInsights />
+        {consent === "all" && <SpeedInsights />}
         <Footer />
         <QuickInfoBanner
-          currentValue={bannerActive}
-          setCallback={handleBannerCallback}
+          currentValue={consent}
+          setCallback={handleConsentCallback}
         />
       </body>
     </html>

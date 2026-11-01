@@ -48,6 +48,12 @@ export default function Footer() {
                 <Link href="/legal/privacy">Privacy</Link>
               </li>
               <li>
+                <Link href="/legal/imprint">Imprint</Link>
+              </li>
+              <li>
+                <Link href="/legal/privacy#cookie-settings">Cookie settings</Link>
+              </li>
+              <li>
                 <Link href="/status">Site status</Link>
               </li>
             </ul>

@@ -1,18 +1,22 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import styles from './QuickInfoBanner.module.scss';
+import type { ConsentValue } from '@/objects/cookieStore';
 
 export default function QuickInfoBanner({
     currentValue, setCallback
-}: { currentValue?: boolean, setCallback: (value: boolean) => void }) {
-    if (currentValue) {
+}: { currentValue: ConsentValue | null, setCallback: (value: ConsentValue) => void }) {
+    const [reopened, setReopened] = useState(false);
+
+    if (currentValue && !reopened) {
         return (
             <button
                 className={styles.infoButton}
-                onClick={() => setCallback(false)}
-                aria-label="Show information banner"
-                title="Show quick information"
+                onClick={() => setReopened(true)}
+                aria-label="Open cookie settings"
+                title="Cookie settings"
             >
                 i
             </button>
@@ -20,29 +24,35 @@ export default function QuickInfoBanner({
     }
 
     return (
-        <>
-            {!currentValue && (
-                <div className={styles.banner}>
-                    <div className={styles.content}>
-                        <h3>Quick note</h3>
-                        <p>
-                            For professional topics, please visit my <Link href="https://juliandevelops.com">professional website</Link>.
-                            <br />
-                            If you want to know the person behind the work, you are in the right place.
-                        </p>
-                        <h4>Cookies</h4>
-                        <p>This website uses cookies to enhance your experience. By continuing to browse, you agree to our use of cookies.</p>
-                        <Link href="/legal/privacy">Learn more about our cookie policy</Link>
-                    </div>
+        <div className={styles.banner} role="region" aria-label="Cookie consent">
+            <div className={styles.inner}>
+                <div className={styles.content}>
+                    <h3>Cookies</h3>
+                    <p>
+                        This site only sets technically necessary cookies to remember your
+                        choice about this banner. No advertising or tracking cookies are used.
+                    </p>
+                    <p>
+                        Optionally, with your consent, I load Vercel Speed Insights to measure
+                        page performance. Details in the{' '}
+                        <Link href="/legal/privacy">privacy policy</Link>.
+                    </p>
+                </div>
+                <div className={styles.actions}>
                     <button
-                        className={styles.closeButton}
-                        onClick={() => setCallback(true)}
-                        aria-label="Close banner"
+                        className={styles.secondaryButton}
+                        onClick={() => setCallback('essential')}
                     >
-                        ×
+                        Essential only
+                    </button>
+                    <button
+                        className={styles.primaryButton}
+                        onClick={() => setCallback('all')}
+                    >
+                        Accept all
                     </button>
                 </div>
-            )}
-        </>
+            </div>
+        </div>
     );
 }

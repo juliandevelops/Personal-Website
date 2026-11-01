@@ -24,6 +24,7 @@ body {
   font-family: var(--font-body), "IBM Plex Sans", sans-serif;
   min-height: 100vh;
   background-color: var(--background);
+  overflow-x: clip;
 }
 
 // Print grain: a faint paper texture instead of gradients or glow.

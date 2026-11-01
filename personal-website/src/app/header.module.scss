@@ -4,6 +4,9 @@
   z-index: 10;
   background-color: var(--background);
   border-bottom: 1px solid var(--hairline);
+  // Extend the header background into the status bar area (Dynamic Island),
+  // so scrolling content never shows through above the navbar.
+  padding-top: env(safe-area-inset-top, 0px);
 }
 
 .inner {

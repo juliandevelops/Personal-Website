@@ -57,7 +57,7 @@ Stattdessen: solides Handwerk. Flache Flächen, klare Typografie, echte Hierarch
 - **Portrait:** frei statt eingeengt — größer (~220px), ohne Haarline-Rahmen, ohne Grayscale-Filter; Caption bleibt.
 - **Konkretes Design-System (umgesetzt):**
   - Papierkorn: feines SVG-Noise (ca. 3% Opacity) auf der ganzen Seite statt Gradients/Glow
-  - Masthead: sticky, global auf allen Seiten — Name links (IBM Plex Serif), Nav rechts (all-small-caps: "Thoughts", "Professional site")
+  - Masthead: sticky, global auf allen Seiten — Name links (IBM Plex Serif), Nav rechts (all-small-caps: "Thoughts", "Professional site"). Erweitert sich per `env(safe-area-inset-top)` + `viewportFit: "cover"` unter die Statusleiste (Dynamic Island), damit nichts dahinter durchscrollt; auf Mobile bricht die Nav unter die Brand-Zeile um; `overflow-x: clip` auf body gegen horizontales Scrollen
   - Hero: typografisches Statement als H1 ("...This page is about *everything else*."), Lede mit Drop Cap, Portrait klein mit Kursiv-Bildunterschrift, Kontakt als Definitions-Meta-Block (Where/Mail/Elsewhere)
   - Sektionen: nummerierte Druck-Markierung ("01 What I'm up to ——————"), Hairline oben 1px
   - Grünes flächiges Panel (invers: Tannengrün mit Creme-Text) als Kontrastmoment für den Sprung zur professionellen Seite
